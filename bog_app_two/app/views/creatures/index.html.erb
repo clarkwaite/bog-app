@@ -1,0 +1,16 @@
+<h1> These Are The Creatures In This Bog! </h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-6">
+      <% @creatures.each do |creature| %>
+      <h3>Name: <%= link_to creature.name, creature_path(creature.id) %></h3>
+      <p>Description: <%=creature.description%></p>
+      <% end %>
+    </div>
+    <%= button_to "Add A Creature", new_creature_path, method: :get %>
+    </div>
+  </div>
+</div>

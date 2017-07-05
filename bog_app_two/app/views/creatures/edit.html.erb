@@ -1,0 +1,19 @@
+<h1> Edit A Creature! </h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      
+    </div>
+    <div class="col-6">
+    <%= form_for @creature do |f| %>
+      <%= f.text_field :name, placeholder: "Enter Name" %><br />
+      <%= f.text_field :description, placeholder: "Enter Description" %><br />
+      <%= f.submit %>
+    <% end %>
+    </div>
+    <div class="col">
+      
+    </div>
+  </div>
+</div>

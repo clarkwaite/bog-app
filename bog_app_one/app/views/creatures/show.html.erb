@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class= "text-center", id='bog-title'>
+      <h2>This Bog Has Some Amazing Creatures</h2>
+      <br>
+    </div>
+  </div>
+<div>
+
+<div class="container">
+  <div class="row, center">
+    <div class="col-10 offset-1", id='bog-title'>
+      <p>The <%= @creature.name %> is one of them.</p>
+      <p>It can be best described as: <%= @creature.description %>
+    </div>
+    <%= link_to "Edit This Creature", edit_creature_path, :class => "btn btn-primary btn-lg btn-block", :id => 'new-creature-button' %>
+    <p>or</p>
+    <%= button_to "Delete", @creature, method: :delete, :class => "btn btn-danger btn-lg btn-block", :id => 'new-creature-button' %>
+</div>

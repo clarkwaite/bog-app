@@ -1,0 +1,7 @@
+<h2> What is that creature?! <h2>
+
+<h5>Name: <%= @creature.name %></h5><br>
+<h5>Description: <%= @creature.description %></h5>
+
+ <button><%= link_to "Edit This Creature", edit_creature_path %></button>
+<%= button_to "Delete", @creature, method: :delete %>

@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-10 offset-1, text-center", id='bog-title'>
+      <h2>This Bog Has Some Amazing Creatures</h2>
+      <p>These are the ones we've seen so far...</p>
+    </div>
+  </div>
+<div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-10 offset-1", id='bog-title'>
+      <% @creatures.each do |creature| %>
+        <p>
+          <strong>Name: </strong><%= link_to creature.name, creature_path(creature.id) %><br>
+          <strong>Description:</strong> <%= creature.description %>
+        </p>
+      <% end %>
+    </div>
+    <%= link_to "Add a New Creature", new_creature_path, :class => "btn btn-primary btn-lg btn-block", :id => 'new-creature-button' %>
+</div>
